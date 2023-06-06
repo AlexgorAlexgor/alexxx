@@ -1,0 +1,8 @@
+--В рамках БД "песочница" напишите след/запросы:
+--5.Вывести контактные имена клиентов, кроме тех, что из France и USA.
+
+
+SELECT ContactName ,country
+FROM Customers
+where country in ("France","USA")
+ORDER BY ContactName

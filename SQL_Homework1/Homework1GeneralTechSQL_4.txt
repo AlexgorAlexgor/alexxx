@@ -1,0 +1,7 @@
+--В рамках БД "песочница" напишите след/запросы:
+--4.В упорядоченном по стоимости виде вывести название и стоимость товаров со скидкой в 9% от всех поставщиков, кроме поставщика 1. 
+--
+SELECT ProductName , Price , Price*0.91 as PriceDiscont9Percent
+FROM [Products]
+where SupplierID != 1
+ORDER BY price
