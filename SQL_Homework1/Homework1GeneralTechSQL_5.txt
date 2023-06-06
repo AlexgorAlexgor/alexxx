@@ -4,5 +4,5 @@
 
 SELECT ContactName ,country
 FROM Customers
-where country in ("France","USA")
+where country not in ("France","USA")
 ORDER BY ContactName
