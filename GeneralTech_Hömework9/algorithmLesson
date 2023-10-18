@@ -1,0 +1,19 @@
+print() {
+    for (let X in this.vertices) {
+      process.stdout.write(X + " -> ");
+      for (let Y of this.vertices[X]) {
+        if (Y != this.vertices[X][this.vertices[X].length - 1])
+          process.stdout.write(Y + ", ");
+        else process.stdout.write(Y);
+      }
+      console.log();
+    }
+  }
+  addEdge(vertex1, vertex2) {
+    if (!this.vertices[vertex1] || !this.vertices[vertex2])
+      throw new Error("At least on of the vertices is missing");
+    if (this.vertices[vertex1].includes(vertex2))
+      throw new Error("The edge already exists");
+    this.vertices[vertex1].push(vertex2);
+    this.vertices[vertex2].push(vertex1);
+  }
